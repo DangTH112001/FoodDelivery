@@ -17,9 +17,10 @@ class _MainHomePageState extends State<MainHomePage> {
         children: const [
           FoodPageHead(),
           Expanded(
-              child: SingleChildScrollView(
-            child: FoodPageBody(),
-          )),
+            child: SingleChildScrollView(
+              child: FoodPageBody(),
+            ),
+          ),
         ],
       ),
     );
