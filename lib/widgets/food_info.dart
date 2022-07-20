@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/models/products_model.dart';
 import 'package:food_delivery/utils/color.dart';
 import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/content_text.dart';
 import 'package:food_delivery/widgets/product_status.dart';
 import 'package:food_delivery/widgets/title_text.dart';
 
-class FoodInfo extends StatefulWidget {
-  const FoodInfo({Key? key}) : super(key: key);
+class FoodInfo extends StatelessWidget {
+  final ProductModel product;
+  const FoodInfo({Key? key, required this.product}) : super(key: key);
 
-  @override
-  State<FoodInfo> createState() => _FoodInfoState();
-}
-
-class _FoodInfoState extends State<FoodInfo> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,7 +21,7 @@ class _FoodInfoState extends State<FoodInfo> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TitleText(
-            text: 'Đùi gà nướng',
+            text: product.name!,
             color: DefaultColor.textColor,
             size: Dimensions.font26,
           ),

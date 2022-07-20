@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:food_delivery/utils/color.dart';
 import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/content_text.dart';
@@ -41,9 +39,8 @@ class _ExpandableState extends State<Expandable> {
           : Column(
               children: [
                 ContentText(
-                  text: hiddenText
-                      ? (firstHalf + '...')
-                      : (firstHalf + secondHalf),
+                  text:
+                      hiddenText ? ('$firstHalf...') : (firstHalf + secondHalf),
                   size: Dimensions.font18,
                   height: 1.8,
                 ),
